@@ -1,4 +1,5 @@
-# 40 Days of JavaScript - Day 1
+# 40 Days of JavaScript 
+# Day 1
 Topics Covered
 1. Parsing Activity of an HTML Page
 
