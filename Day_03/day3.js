@@ -2,7 +2,7 @@ console.log("Day 3")
 /*
 #jargons:
     *operator
-    *operends
+    *operands
     *expression [x=2(assignment expression); x=2+3(evaluating expression)]
 */
 
@@ -20,7 +20,7 @@ y *= 2 //-=
 
 //logical operator
 console.log("cow" && "horse")
-console.log("cow" ?? "horse") //nullish qualishoin operator; will check null and undefine; 1st check 1st one if true threturn the value or move to next one
+console.log("cow" ?? "horse") //nullish qualision operator; will check null and undefine; 1st check 1st one if true threturn the value or move to next one
 
 //conditonal ternary operator
 let getStatus = 1 ? "Active" : "Inactive";
