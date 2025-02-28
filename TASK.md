@@ -120,7 +120,7 @@
     ## 4. Pay for your movie ticket
     Imagine, the INOX charges ticket prices based on age:
     - Children (<10 years): $3
-    - Adults (12 - 60 years): $10
+    - Adults (10 - 60 years): $10
     - Seniors (60+ years): $8
     
     Write a program that prints the ticket price based on the person’s age.
