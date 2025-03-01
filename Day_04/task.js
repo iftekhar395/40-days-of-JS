@@ -20,11 +20,11 @@ let invalid = "Invalid Amount"
 let result = ""
 if (amount && amount%100===0) {
     console.log(success);
-    alert(success,"40 days JS");
+    alert(success);
     result = success;
 } else {
     console.log(invalid);
-    alert(invalid,"40 days JS");
+    alert(invalid);
     result = invalid;
 }
 document.getElementById("atm").innerText = amount;
@@ -39,18 +39,70 @@ let operator = prompt("Provide any ane of the operators + or - or / or * or %",'
 let value;
 switch (operator) {
     case '+' :
-        value = numbers["1st_number"] + numbers["2nd_number"]
+        value = numbers["1st_number"] + numbers["2nd_number"];
+        break;
     case '-' :
-        value = numbers["1st_number"] - numbers["2nd_number"]
+        value = numbers["1st_number"] - numbers["2nd_number"];
+        break;
     case '/' :
-        value = numbers["1st_number"] / numbers["2nd_number"]
+        value = numbers["1st_number"] / numbers["2nd_number"];
+        break;
     case '*' :
-        value = numbers["1st_number"] * numbers["2nd_number"]
+        value = numbers["1st_number"] * numbers["2nd_number"];
+        break;
     case '%' :
-        value = numbers["1st_number"] % numbers["2nd_number"]
+        value = numbers["1st_number"] % numbers["2nd_number"];
+        break;
     default:
         value = "Invalid Data Provided"
 }
-console.log(value,numbers["1st_number"]);
+console.log(value);
+
+document.getElementById("calculator").innerText = operator;
+document.getElementById("calculator_rslt").innerText = value;
 
 //task 4
+let age,price;
+age = prompt("Provide your age here")
+switch (age) {
+    case age>=0 && age<10:
+        price = '3$';
+    case age<=10 && age>=60:
+        price = '10$';
+    case age>60:
+        price = '8$';
+    default:
+        price = 'No Ticket';
+}
+document.getElementById("ticket").innerText = age;
+console.log(price);
+document.getElementById("ticket_rslt").innerText = price;
+
+//task 5
+//I would like to quit this task.
+
+//task 6
+let et = "Equilateral Triangle";
+let it = "Isosceles Triangle";
+let st = "Scalene Triangle";
+let tt = ""
+
+let f_angle = prompt("Provide the 1st angle of the triangle");
+let s_angle = prompt("Provide the 2nd angle of the triangle");
+let t_angle = prompt("Provide the 3rd angle of the triangle");
+
+if(Number(f_angle)+Number(s_angle)+Number(t_angle)===180){
+    switch(f_angle,s_angle,t_angle){
+        case f_angle===s_angle && s_angle===t_angle:
+            tt = et;
+        case f_angle!==s_angle && s_angle!==t_angle && f_angle!==t_angle:
+            tt = st;
+        default:
+            tt = it;
+    }
+}else{
+    alert("Invalid data provided")
+}
+document.getElementById("triangle").innerText = `1st angle: ${f_angle}, 2nd angle: ${s_angle}, 3rd angle: ${t_angle}`;
+console.log(tt);
+document.getElementById("triangle_rslt").innerText = tt;
