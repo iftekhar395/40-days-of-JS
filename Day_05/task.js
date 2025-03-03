@@ -33,11 +33,12 @@ for(let i = 1; i<=20; i++){
 }
 
 //task 5
-let originalNumber = 123456
-let reversedNumber;
-let initVal = 0;
-while(originalNumber.toString().length>initVal){
-    
-    initVal++;
+let originalNumber = prompt("Share the number you want to reverse")
+let oNumToStr = originalNumber.toString();
+let reversedNumber = '';
+let initVal = oNumToStr.length-1;
+while(0<=initVal){
+    reversedNumber += oNumToStr.charAt(initVal);
+    initVal--;
 }
 console.log(reversedNumber)
