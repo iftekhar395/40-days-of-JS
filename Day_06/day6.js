@@ -30,7 +30,7 @@ function double(x){
 
 console.log(double(result));
 
-//Deault Parameters
+//Default Parameters
 function calc(a=0,b=0){
     return a+b;
 }
@@ -106,10 +106,10 @@ let greetMe = (msg)=>{
 }
 console.log(greetMe("Hello!!!"));
 
-//IIFE(Immedately Invoked Function Exression)
-(function(mymsg){//if we want to use function imdiate after call without name
+//IIFE(Immediately Invoked Function Exression)
+(function(mymsg){//if we want to use function immidiate after call without name
     console.log(mymsg);
-})("IIFE")
+})("IIFE")//argument pass
 
 //function execution stack or call stack
 function classRange(classNo){

@@ -67,10 +67,13 @@ age = prompt("Provide your age here")
 switch (age) {
     case age>=0 && age<10:
         price = '3$';
+        break;
     case age<=10 && age>=60:
         price = '10$';
+        break;
     case age>60:
         price = '8$';
+        break;
     default:
         price = 'No Ticket';
 }
@@ -92,13 +95,12 @@ let s_angle = prompt("Provide the 2nd angle of the triangle");
 let t_angle = prompt("Provide the 3rd angle of the triangle");
 
 if(Number(f_angle)+Number(s_angle)+Number(t_angle)===180){
-    switch(f_angle,s_angle,t_angle){
-        case f_angle===s_angle && s_angle===t_angle:
-            tt = et;
-        case f_angle!==s_angle && s_angle!==t_angle && f_angle!==t_angle:
-            tt = st;
-        default:
-            tt = it;
+    if (f_angle===s_angle && s_angle===t_angle){
+        tt = et;
+    }else if (f_angle!==s_angle && s_angle!==t_angle && f_angle!==t_angle){
+        tt = st;
+    }else{
+        tt = it;
     }
 }else{
     alert("Invalid data provided")
