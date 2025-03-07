@@ -1,6 +1,6 @@
 # GEC and FEC with CP and EP flow
 
-![alt text](<Exicution Context.drawio.png>)
+![alt text](<Exicution Context.drawio(1).png>)
 
 # Stack and Heap Flow
 

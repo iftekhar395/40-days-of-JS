@@ -17,7 +17,4 @@ Execution Context
 
         Execution Phase:
             1. assign the value 'Tom' to the variable name
-
-
-
 */
