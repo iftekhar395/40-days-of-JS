@@ -1,5 +1,5 @@
 //--global scope; can accessible anywhere---
-let name = "Iftekhar";//using let can be accessible from window.name but not for let
+let name = "Iftekhar";//using var can be accessible from window.name but not for let
 
 function getName(){
     console.log("Inside function",name)
