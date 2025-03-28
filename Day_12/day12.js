@@ -129,12 +129,13 @@ const obj3 = {
 const obj4 = Object.assign({}, obj3)
 console.log(obj4)
 
-obj4.b.c = 3 //will change the value of obj3(b) as well since 2 is not refrence to b
+obj4.b.c = 3 //will change the value of obj3(b) as well since 2 is not reference to b
 console.log(obj4.b.c,obj3.b.c)
 
 obj4.a = 5
 console.log(obj4.a,obj3.a)
 
+//structuredClone
 const obj5 = structuredClone(obj3) //use structuredClone for deep clone of an object
 obj5.b.c = 30
 console.log(obj5.b.c,obj3.b.c) // will not change for structured clone
@@ -159,7 +160,7 @@ const patient2 = new Map(
         ["age" , 30]
     ]
 )
-const patientObj = Object.fromEntries(patient2) 
+const patientObj = Object.fromEntries(patient2) //convert array to object
 console.log(patientObj)
 
 const emp = {
