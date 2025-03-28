@@ -114,7 +114,11 @@ function inventorySystem(){
 inventorySystem().availability('Book A');
 inventorySystem().restock('Book C',5);
 inventorySystem().restock('Book C',5);
-//output:
+/*
+output:Task 5 Book A: 120 quantity is available. task.js:93:57
+Task 5 
+Array(3) [ {…}, {…}, {…} ]
+*/
 
 
 //task 6
