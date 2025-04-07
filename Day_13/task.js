@@ -55,7 +55,7 @@ anyInstance.anyMethod()
 //  },
 //};
 //
-//user.greet();//will return Hello, !; here this refers to its global scope where name is undefined
+//user.greet();//will return Hello, !; here this refers to its global scope where name is blank for window.name
 
 //correct code
 const user = {
@@ -99,7 +99,7 @@ greetFn.call(obj);//Hello, Tom!
 //  name: "Alex",
 //  greet: function () {
 //    function inner() {
-//      console.log(`Hello, ${this.name}!`);//here this refered to window object and this.name is undefined as inner is a //standalone function
+//      console.log(`Hello, ${this.name}!`);//here this refered to window object and this.name is blank as inner is a standalone function
 //    }
 //    inner();
 //  },
@@ -121,7 +121,16 @@ const msg2 = user3.greet();
 msg2()
 
 //task 5 Create a Sports constructor function that takes name and number of players as arguments and assigns them using this keyword. Then, create two sports instances and log their details
+function Sports(name,num){
+    this.name = name;
+    this.num = num;
+    this.details = function(){
+        console.log('task 5:',`It's required ${this.num} players to play ${this.name}.`)
+    }
+}
 
+const cricket = new Sports("Cricket",11)
+cricket.details()
 
 //task 6
 const car1 = {
@@ -151,10 +160,21 @@ car2.describeCar();
 Object.assign(car2,{newDescribe: car1.describe}) //It copies own enumerable properties (including functions) from one or more source objects to the target object
 car2.newDescribe()
 
+//task 7
+const person = {
+    name: "Charlie",
+    sayHello: function () {
+        console.log('task 7: ',this.name);
+    },
+    sayHelloArrow: () => {
+        console.log('task 7: ',this.name);
+    },
+};
 
+person.sayHello();//Charlie
+person.sayHelloArrow();//"" (empty string)
 
-
-
+//output: C: "Charlie" and "" (empty string)
 
 
 
