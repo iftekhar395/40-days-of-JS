@@ -1,5 +1,5 @@
 //task 1
-//use strict
+//"use strict"
 console.log(this) //window
 
 const insideObj = {
@@ -174,7 +174,7 @@ const person = {
 person.sayHello();//Charlie
 person.sayHelloArrow();//"" (empty string)
 
-//output: C: "Charlie" and "" (empty string)
+//output: C: "Charlie" and "" (empty string); arrow function has no own this and relies on parent scope which is window and window.name is empty in browser conlsole but undefined in vs code
 
 
 
